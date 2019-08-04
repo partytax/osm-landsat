@@ -1,12 +1,4 @@
-data/test/*
-data/source/*
-data/reproject/*
-data/tile/*
-data/prepared/*
-data/train/*
-data/validate/*
-data/grid/*
-data/models/*
+data/
 
 venv/
 
