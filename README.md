@@ -1,4 +1,4 @@
-Modeling the Relationship between Landsat Imagery and OpenStreetMap Data
+# Modeling the Relationship between Landsat Imagery and OpenStreetMap Data
 
 To use this library, begin by creating a directory called 'data'. Inside this directory, create the following folders:
 
