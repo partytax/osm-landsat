@@ -140,19 +140,11 @@ def model(epochs=10, model_folder='data/models', train_folder='data/train', vali
     print('model compiled')
 
     #fit and validate model
-    #started with batch size of 32, but switched to 64 after StackExchange advice.
     history = model.fit(X_train_batch,
                     y_train_batch,
                     epochs=epochs,
                     batch_size=48,
                     validation_data=(X_validate_batch, y_validate_batch))
-
-    #store model results
-    #model_data = {'model':model, 'history':history}
-    #model_name = input('enter name for model: ')
-    #model_path = model_folder + '/' + model_name
-    #with open(model_path, 'w') as f:
-    #    json.dump(model_data, f)
     print('model fitted')
 
     #extract relevant metrics from model history
@@ -174,11 +166,9 @@ def model(epochs=10, model_folder='data/models', train_folder='data/train', vali
     plt.title('Training & Validation Loss')
     plt.legend()
     plt.show()
+    print('visualizations complete')
 
-    print('MODELING COMPLETE')
-
-def stats(model_folder='data/models'):
-    pass
-
-def test():
-    pass
+    #calculate and print test results
+    test_loss, test_acc = model.evaluate_generator(test_generator, steps=50)
+    print('test acc:', test_acc)
+    print('test loss', test_loss)

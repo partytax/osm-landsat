@@ -40,11 +40,11 @@ grid.backup()
 ##osm.categorize_building_counts()
 
 #extract data from coordinate grid array, process, and place in train/validate/test arrays
-learn.prepare(scale=128)
+##learn.prepare(scale=128)
 #define TensorFlow model, compile, and fit
-learn.model(scale=128, epochs=15)
+learn.model(scale=128, epochs=1)
 #load a model and display plots
-learn.stats()
+##learn.stats()
 
 #UTILITIES
 #grid.replace('status', True, 0)
