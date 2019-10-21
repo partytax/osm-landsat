@@ -1,5 +1,7 @@
 # Modeling the Relationship between Landsat Imagery and OpenStreetMap Data
 
+![visualization of geographic numpy array](readme_assets/numpy-vis.png)
+
 To use this library, begin by creating a directory called 'data'. Inside this directory, create the following folders:
 
 'grid'
